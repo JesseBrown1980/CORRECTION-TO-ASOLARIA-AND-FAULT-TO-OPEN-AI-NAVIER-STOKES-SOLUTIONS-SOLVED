@@ -1,0 +1,19 @@
+[package]
+name = "correction-to-asolaria-and-fault-to-openai-navier-stokes"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.81"
+description = "Resolution of Navier-Stokes Global Regularity: Discrete Ternary Shell Invariant vs OpenAI 2026 Continuous Blowup"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[lib]
+name = "navier_stokes_invariant_2"
+path = "src/lib.rs"
+
+[[bin]]
+name = "verify"
+path = "src/bin/verify.rs"
+
+[dependencies]
+navier-stokes-regularity-spectral = { path = "vendor/navier" }
