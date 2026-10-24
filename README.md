@@ -1,3 +1,5 @@
+![Correction to Asolaria & Fault to OpenAI Navier–Stokes Solutions](Screenshot%202026-10-24%20005720.png)
+
 # Correction to Asolaria & Fault to OpenAI Navier–Stokes Solutions
 
 This repository establishes the **exact mathematical resolution of the 3D Navier–Stokes existence and smoothness problem**, contrasts it directly with OpenAI's October 2026 166-page paper (*"Finite Time Blowup for Navier–Stokes"*), and demonstrates why continuous singular blowup collapses into unconditionally regular, periodic orbits when executed on discrete physical hardware.
