@@ -106,7 +106,28 @@ u ↦ u + NL(u) − ν·9ⁿ (mod P).
 18,750,000,000 (`0x259D_7863_C53B_AE36`, `sector-187.rooms`), with poles in
 `sector-000` and `sector-374`.
 
-## 5. Run it
+## 5. Evidence: the collapse OpenAI's construction needs, in a finite fluid
+
+Two sealed packages (Rust 1.81, integer only, HBI → HBP → SHA → SH → HASH, json=0), replayed byte for
+byte on every pull request by `.github/workflows/results-replay.yml`:
+
+- [Collapsing vortex at three resolutions](results/2026-10-30-cutoff/). A swirl is driven toward zero core
+  radius on the same physical schedule at 24³, 48³ and 96³ cells, with a scrambled-direction control arm.
+
+  | Grid | Peak axis vorticity | Drive ÷ control | Peak cell momentum (cap 364) | Core edge at end |
+  |---|---|---|---|---|
+  | 24³ | 681 | 4.1× | 276 | 3 cells, 1/8 of the box |
+  | 48³ | 2,011 | 8.9× | 334 | 6 cells, 1/8 |
+  | 96³ | 4,078 | 11.4× | 364, the cap | 12 cells, 1/8 |
+
+  The vortex concentrates as the grid is refined, and the core holds a fixed physical size while the
+  drive radius goes to zero. At 96³ the cells reach the occupancy cap, so further pushes cannot
+  concentrate the swirl: where the continuum construction shrinks the core to zero volume, the finite fluid
+  stops at its capacity.
+- [Viscosity and equation of state on the same gates](results/2026-10-30-calibration/): kinematic
+  viscosity 0.4397 and 0.4258 cells²/tick at two sizes (within 3%), c_s² = 2/3 exactly.
+
+## 6. Run it
 
 ```bash
 cargo test
